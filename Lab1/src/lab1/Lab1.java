@@ -12,7 +12,7 @@ import java.util.Random;
 public class Lab1 {
     static int Fill_array_elem = 100000;/* Кількість елементів в списку */
     static int Insert_elem = 1000; /* Кількість елементів в списку */
-    static int random_element_limit = 300;
+    static int random_element_limit = 50;
     static String ArrayList = "ArrayList";
     static String LinkedList = "LinkedList";
 
@@ -62,7 +62,7 @@ public class Lab1 {
         long time = System.currentTimeMillis();
 
         for (int i = 0; i < Insert_elem; i++){  /* Вставка елементів в початок масиву */
-            list.set(i, random(random_element_limit));
+            list.add(i, random(random_element_limit));
         }
 
         System.out.printf("Insert in the begin %s: %s%n", listType, System.currentTimeMillis() - time);
@@ -71,8 +71,8 @@ public class Lab1 {
     public static void Time_List_End(List<Integer> list, String listType){
         long time = System.currentTimeMillis();
 
-        for (int i = Insert_elem-1; i >= 0; i--){ /* Вставка елементів в кінець масиву */
-            list.set(i, random(random_element_limit));
+        for (int i = Fill_array_elem-1; i <= Insert_elem; i--){ /* Вставка елементів в кінець масиву */
+            list.add(i, random(random_element_limit));
         }
 
         System.out.printf("Insert in the end %s: %s%n", listType, System.currentTimeMillis() - time);
@@ -85,7 +85,7 @@ public class Lab1 {
         int listMiddleElement = listHalfSize - Insert_elem/2;
 
         for (int i = listMiddleElement; i < (listMiddleElement+Insert_elem); i++){ /* Вставка елементів в середину масиву */
-            list.set(i, random(random_element_limit));
+            list.add(i, random(random_element_limit));
         }
 
         System.out.printf("Insert in the middle %s: %s%n", listType, System.currentTimeMillis() - time);
