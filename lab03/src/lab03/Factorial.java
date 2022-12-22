@@ -10,21 +10,20 @@ package lab03;
  * @author vreka
  */
 public class Factorial {
- int recursionExecute(int num, int f, int stop){
-        num *= f;
-        f++;
-        if (f <= stop){
-            num = recursionExecute(num, f, stop);
-        }
+    int recursionExecute(int num){
+        if (num <= 1) {
+            return 1;
+        }    
+    return num * recursionExecute(num - 1);
+}
 
-        return num;
-    }
     int cycleExecute(int f){
         int result = 1;
+        
         for(int i = 1; i <= f; i++){
             result *= i;
         }
 
-        return result;
+    return result;
     }
 }

@@ -19,7 +19,7 @@ public static void main(String[] args) {
         Factorial fact = new Factorial();
         System.out.printf("Enter number for calculations factorial: ");
         int f  = scanner.nextInt();
-        int r1 = fact.recursionExecute(1, 1, f);
+        int r1 = fact.recursionExecute(f);
         System.out.println("Factorial recursive n: " + f);
         System.out.println("Factorial recursive execute: " + r1);
 
@@ -32,7 +32,7 @@ public static void main(String[] args) {
         Fibonacci fib = new Fibonacci();
         System.out.printf("Enter number for calculations fibonacci: ");
         int n = scanner.nextInt();
-        r1 = fib.recursionExecute(0, 1, 0, n);
+        r1 = fib.recursionExecute(n);
         System.out.println("Fibonacci recursive n: " + n);
         System.out.println("Fibonacci recursive execute: " + r1);
 
@@ -52,7 +52,7 @@ public static void main(String[] args) {
         int x = scanner.nextInt();
         int y = scanner.nextInt();
         Sum sum = new Sum();
-        r1 = sum.execute(x,y);
+        r1 = sum.adding(x,y);
         System.out.println("Sum without arithmetic operations x: " + x + ", y: " + y);
         System.out.println("Sum without arithmetic operations execute: " + r1);
 

@@ -10,9 +10,11 @@ package lab03;
  * @author vreka
  */
 public class Sum {
-public int execute(int x, int y){
-        if (y == 0) return x;
+    public int adding(int x, int y) {
+        if (y == 0) { 
+            return x;
+        }
 
-        return execute(x ^ y, (x & y) << 1);
+        return adding(++x, --y);
     }
 }

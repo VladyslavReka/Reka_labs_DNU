@@ -10,7 +10,7 @@ package lab03;
  * @author vreka
  */
 public class DigitsSum {
- int execute(int number){
+    int execute(int number){
         if (number == 0){
             return 0;
         }
